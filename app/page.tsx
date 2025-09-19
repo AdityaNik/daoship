@@ -1,8 +1,7 @@
 "use client";
 import { Navigation } from "@/components/Navigation";
 import Particles from "../components/Particles";
-import SplitText from "@/components/SplitText";
-import ShinyText from "@/components/ShinyText";
+import { MainContet } from "@/components/MainContent";
 
 export default function Home() {
   return (
@@ -24,11 +23,8 @@ export default function Home() {
       {/* Your content goes here */}
       <div className="relative z-10 m-10">
         <Navigation />
-        <div className="flex justify-center">
-          <ShinyText
-            text="Hello, GSAP!"
-            className="text-6xl font-bold  text-center"
-          />
+        <div>
+          <MainContet />
         </div>
       </div>
     </div>
