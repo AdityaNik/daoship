@@ -22,7 +22,6 @@ export default function Home() {
 
       {/* Your content goes here */}
       <div className="relative z-10 m-10">
-        <Navigation />
         <div>
           <MainContet />
         </div>
