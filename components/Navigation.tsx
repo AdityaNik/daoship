@@ -1,23 +1,33 @@
+"use client";
+
 import { Github, Wallet } from "lucide-react";
 import { ModeToggle } from "./mode-toggle";
 import ShinyText from "./ShinyText";
 import { Button } from "./ui/button";
+import { useRouter } from "next/navigation";
 
 export const Navigation = () => {
+  const router = useRouter();
+
   return (
     <div className="">
       <div className="m-10 rounded-2xl border border-white/25 bg-gray/40 backdrop-blur-md shadow-lg px-12 py-3 flex items-center justify-between">
-        <div className="text-2xl">DAOShip</div>
+        <div
+          onClick={() => router.push("/")}
+          className="text-2xl cursor-pointer font-semibold"
+        >
+          DAOShip
+        </div>
 
         <div className="flex gap-12 justify-center items-center">
-          <div className="text-xl">
-            <ShinyText text="Home" />
+          <div className="text-xl" onClick={() => router.push("/")}>
+            <ShinyText text="Home" className="cursor-pointer" />
           </div>
-          <div className="text-xl">
-            <ShinyText text="Explore" />
+          <div className="text-xl" onClick={() => router.push("/explore")}>
+            <ShinyText text="Explore" className="cursor-pointer" />
           </div>
-          <div className="text-xl">
-            <ShinyText text="Create DAO" />
+          <div className="text-xl" onClick={() => router.push("/createDAO")}>
+            <ShinyText text="Create DAO" className="cursor-pointer" />
           </div>
           <div className="flex gap-4 ">
             <Button className="p-4 text-lg flex items-center gap-2 rounded-full border border-white/40 bg-black/40 text-white hover:bg-black/60">
