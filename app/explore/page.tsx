@@ -1,7 +1,13 @@
+"use client";
+
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
+import { useRouter } from "next/navigation";
 
 export default function ExplorePage() {
+  const router = useRouter();
+  const id = 1;
+
   return (
     <div className="m-20">
       <div className="text-3xl font-bold">Explore DAO's</div>
@@ -13,7 +19,10 @@ export default function ExplorePage() {
       </div>
 
       <div className="flex gap-16 flex-wrap mt-12">
-        <Card>
+        <Card
+          className="cursor-pointer transition-shadow"
+          onClick={() => router.push(`/daos/${id}`)}
+        >
           <CardHeader>
             <img src="/temp.png" alt="DAO Logo" className="" />
           </CardHeader>

@@ -23,10 +23,14 @@ export const MainContet = () => {
         code.
       </p>
       <div className="flex gap-4">
-        <Button size={"lg"} onClick={() => router.push("/createDAO")}>
+        <Button
+          className="cursor-pointer"
+          size={"lg"}
+          onClick={() => router.push("/createDAO")}
+        >
           Create DAO
         </Button>
-        <Button size={"lg"} variant={"secondary"}>
+        <Button className="cursor-pointer" size={"lg"} variant={"secondary"}>
           Learn More
         </Button>
       </div>
