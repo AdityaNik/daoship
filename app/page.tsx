@@ -1,5 +1,4 @@
 "use client";
-import { Navigation } from "@/components/Navigation";
 import Particles from "../components/Particles";
 import { MainContet } from "@/components/MainContent";
 
@@ -9,11 +8,11 @@ export default function Home() {
       {/* Background Particles */}
       <div className="absolute inset-0 z-0">
         <Particles
-          particleColors={["#ffffff", "#ffffff"]}
-          particleCount={200}
+          particleColors={["##01aaff", "#01aaff"]}
+          particleCount={150}
           particleSpread={10}
-          speed={0.1}
-          particleBaseSize={100}
+          speed={0.2}
+          particleBaseSize={150}
           moveParticlesOnHover={true}
           alphaParticles={false}
           disableRotation={false}

@@ -35,7 +35,7 @@ export const Navigation = () => {
               Connect GitHub
             </Button>
 
-            <Button className="p-4 text-lg flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white shadow-md hover:opacity-90">
+            <Button className="p-4 text-lg flex items-center gap-2 rounded-lg bg-gradient-to-r from-blue-500 to-indigo-500 text-white shadow-md hover:opacity-90">
               <Wallet className="h-8 w-8" />
               Connect Wallet
             </Button>

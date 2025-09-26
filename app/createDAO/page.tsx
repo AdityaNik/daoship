@@ -2,7 +2,6 @@
 import Stepper, { Step } from "../../components/Stepper";
 import { Slider } from "@/components/ui/slider";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { useState } from "react";
 
 export default function Createdao() {
@@ -26,7 +25,6 @@ export default function Createdao() {
   return (
     <div className="flex justify-center p-6 sm:p-10 lg:p-16">
       <div className="w-full max-w-4xl shadow-lg p-8 sm:p-10 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20">
-        {/* Heading above stepper */}
         <h1 className="text-3xl font-bold text-center text-white mb-8">
           Create Your DAO
         </h1>
@@ -48,7 +46,7 @@ export default function Createdao() {
                 className="w-full mt-3 p-3 rounded-lg bg-white/20 text-white placeholder-gray-300 border border-white/30 focus:outline-none focus:ring-2 focus:ring-blue-400"
                 placeholder="DAO Name"
               />
-              <input
+              <textarea
                 className="w-full mt-3 p-3 rounded-lg bg-white/20 text-white placeholder-gray-300 border border-white/30 focus:outline-none focus:ring-2 focus:ring-blue-400"
                 placeholder="Description"
               />
@@ -314,7 +312,7 @@ export default function Createdao() {
 
             <div className="bg-green-900/30 border border-green-700 text-green-400 p-4 rounded-lg text-center mb-6">
               Ready to launch! 🚀 By submitting, you’ll deploy this DAO to the
-              Avalanche blockchain.
+              Solana blockchain.
               <span className="font-semibold">
                 {" "}
                 This action is irreversible.

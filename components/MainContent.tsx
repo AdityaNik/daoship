@@ -18,13 +18,13 @@ export const MainContet = () => {
       />
 
       <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-        Create, deploy and manage DAOs on Avalanche in minutes. Join the
+        Create, deploy and manage DAOs on Solana in minutes. Join the
         decentralized governance revolution without writing a single line of
         code.
       </p>
       <div className="flex gap-4">
         <Button
-          className="cursor-pointer"
+          className="cursor-pointer bg-gradient-to-r from-blue-500 to-indigo-500 text-white shadow-md hover:opacity-90"
           size={"lg"}
           onClick={() => router.push("/createDAO")}
         >
