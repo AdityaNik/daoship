@@ -4,12 +4,9 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   Activity,
@@ -49,7 +46,7 @@ export default function DAODetails() {
   const router = useRouter();
 
   return (
-    <div className="min-h-screen m-10">
+    <div className="min-h-screen m-10 mt-40">
       <div className="p-8">
         {/* Header Section */}
         <div className="flex justify-between items-start mb-8">

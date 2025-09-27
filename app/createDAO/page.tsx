@@ -23,7 +23,7 @@ export default function Createdao() {
   };
 
   return (
-    <div className="flex justify-center p-6 sm:p-10 lg:p-16">
+    <div className="flex justify-center p-6 sm:p-10 lg:p-16 mt-28">
       <div className="w-full max-w-4xl shadow-lg p-8 sm:p-10 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20">
         <h1 className="text-3xl font-bold text-center text-white mb-8">
           Create Your DAO

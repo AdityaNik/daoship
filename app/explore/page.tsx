@@ -11,7 +11,7 @@ export default function ExplorePage() {
 
   return (
     <div>
-      <div className="m-20 text-white">
+      <div className="m-20 mt-40 text-white">
         <div className="text-3xl font-bold">Explore DAO's</div>
         <span className="text-md">
           Discover and join DAO's created with DAOShip{" "}

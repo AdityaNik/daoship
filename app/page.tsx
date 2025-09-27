@@ -13,14 +13,14 @@ export default function Home() {
           particleSpread={10}
           speed={0.2}
           particleBaseSize={150}
-          moveParticlesOnHover={true}
+          moveParticlesOnHover={false}
           alphaParticles={false}
           disableRotation={false}
         />
       </div>
 
       {/* Your content goes here */}
-      <div className="relative z-10 m-10">
+      <div className="relative z-10 m-10 mt-40">
         <div>
           <MainContet />
         </div>

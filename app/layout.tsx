@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Navigation } from "@/components/Navigation";
 import { ThemeProvider } from "@/components/theme-provider";
+import Wallet from "@/components/Wallet";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,10 +36,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md">
-            <Navigation />
-          </div>
-          <main className="pt-20">{children}</main>
+          <Wallet>{children}</Wallet>
         </ThemeProvider>
       </body>
     </html>

@@ -1,6 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Slider } from "@/components/ui/slider";
 import { useState } from "react";
 
@@ -9,7 +9,7 @@ export default function CreateProposalPage() {
 
   return (
     <div>
-      <div className="m-20 flex flex-col justify-center items-center gap-2">
+      <div className="m-10 mt-40 flex flex-col justify-center items-center gap-2">
         <div className="flex items-center gap-3">
           <h1 className="text-4xl font-bold">Create Proposal</h1>
         </div>
