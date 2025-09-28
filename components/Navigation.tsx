@@ -13,12 +13,24 @@ import {
   DialogHeader,
   DialogTitle,
 } from "./ui/dialog";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { signIn, useSession } from "next-auth/react";
 
 export const Navigation = () => {
   const router = useRouter();
   const { wallet, publicKey, disconnect, select, wallets } = useWallet();
   const [open, setOpen] = useState(false);
+  const session = useSession();
+
+  const fetch_repo = async () => {
+    const res = await fetch("https://api.github.com/user/repos", {
+      headers: {
+        Authorization: `token ${session.data?.accessToken}`,
+      },
+    });
+    const repos = await res.json();
+    console.log(repos);
+  };
 
   return (
     <div className="">
@@ -41,10 +53,26 @@ export const Navigation = () => {
             <ShinyText text="Create DAO" className="cursor-pointer" />
           </div>
           <div className="flex gap-4 ">
-            <Button className="p-4 text-lg cursor-pointer flex items-center gap-2 rounded-full border border-white/40 bg-black/40 text-white hover:bg-black/60">
-              <Github className="h-8 w-8" />
-              Connect GitHub
-            </Button>
+            {session.status != "authenticated" ? (
+              <Button
+                onClick={() => signIn("github")}
+                className="p-4 text-lg cursor-pointer flex items-center gap-2 rounded-full border border-white/40 bg-black/40 text-white hover:bg-black/60"
+              >
+                <Github className="h-8 w-8" />
+                Connect GitHub
+              </Button>
+            ) : (
+              <Button className="p-4 text-lg cursor-pointer flex items-center gap-2 rounded-full border border-white/40 bg-black/40 text-white hover:bg-black/60">
+                <img
+                  src={session.data.user?.image || ""}
+                  alt="new_image"
+                  width={30}
+                  height={30}
+                  className="rounded-full"
+                />
+                {session.data.user?.name}
+              </Button>
+            )}
             {!wallet ? (
               <Button
                 onClick={() => setOpen(true)}
